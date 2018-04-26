@@ -1,6 +1,7 @@
 FROM java:latest
 WORKDIR /docker
-ADD docker /docker
+ADD bin /docker
+ADD lib /docker
 RUN ["chown", "-R", "daemon:daemon", "."]
 EXPOSE 5000
 USER daemon
